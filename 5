@@ -1,0 +1,11 @@
+const EventEmitter = require('events');
+
+const event = new EventEmitter();
+
+// Register an event listener
+event.on('welcome', () => {
+    console.log("Welcome Event Triggered");
+});
+
+// Trigger the event
+event.emit('welcome');
