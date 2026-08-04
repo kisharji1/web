@@ -1,0 +1,17 @@
+console.log("Program Started");
+
+setTimeout(() => {
+    console.log("Executed after 3 seconds");
+}, 3000);
+
+let count = 0;
+
+let timer = setInterval(() => {
+    count++;
+    console.log("Count:", count);
+
+    if (count === 5) {
+        clearInterval(timer);
+        console.log("Program Ended");
+    }
+}, 1000);
