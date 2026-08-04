@@ -1,0 +1,19 @@
+const fs = require('fs');
+
+// Write
+fs.writeFileSync("sample.txt", "Hello Node JS");
+
+// Read
+let data = fs.readFileSync("sample.txt", "utf8");
+console.log(data);
+
+// Append
+fs.appendFileSync("sample.txt", "\nLearning File System");
+
+// Read again after appending
+let updatedData = fs.readFileSync("sample.txt", "utf8");
+console.log(updatedData);
+
+// Delete
+fs.unlinkSync("sample.txt");
+console.log("File deleted successfully.");
